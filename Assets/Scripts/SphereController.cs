@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class SphereController : MonoBehaviour
 {
+    /// <summary>公転運動の中心 /// </summary>
     [SerializeField] Transform m_aim = null;
+    /// <summary>公転半径/// </summary>
     [SerializeField] float m_rotateLength = 3;
+    /// <summary>公転速度 /// </summary>
     float m_speed;
+    /// <summary>公転運動の速さ /// </summary>
     float m_time;
     // Start is called before the first frame update
     void Start()
     {
+        //公転速度をランダムに決定
         m_speed = Random.Range(0.1f, 2);
     }
 
     // Update is called once per frame
     void Update()
     {
+        //時間経過処理
         m_time += Time.deltaTime;
         CircularMotion(m_time * m_speed);
     }

@@ -675,7 +675,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u64CD\u4F5C\u8AAC\u660E\uFF1A\nWASD\uFF1A\u79FB\u52D5\nSpace: \u30A2\u30FC\u30E0\u3092\u4E0B\u3052\u308B\n\u53F3\u30AF\u30EA\u30C3\u30AF\uFF1A\u30AA\u30D6\u30B8\u30A7\u30AF\u30C8\u3092\u653E\u3059"
+  m_Text: "WASD\uFF1AMove\nSpace: Down Arms\nRight Click\uFF1ALet Go Object"
 --- !u!222 &703860157
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1355,7 +1355,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -92.899994, y: 23.42}
+  m_AnchoredPosition: {x: -106.9, y: 38.99}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1241175894
@@ -2214,7 +2214,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u64CD\u4F5C\u8AAC\u660E\n"
+  m_Text: 'Instructions
+
+
+'
 --- !u!222 &1954411138
 CanvasRenderer:
   m_ObjectHideFlags: 0

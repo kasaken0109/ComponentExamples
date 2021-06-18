@@ -8,10 +8,12 @@ public class InputManager : MonoBehaviour
     /// <summary>入力されたテキストを反映するテキストボックス/// </summary>
     [SerializeField] Text m_text = null;
     InputField inputField = null;
+    LineRenderer lineRenderer = null;
     // Start is called before the first frame update
     void Start()
     {
         inputField = GetComponent<InputField>();
+        lineRenderer = GameObject.Find("Panel").GetComponent<LineRenderer>();
     }
 
     // Update is called once per frame
@@ -25,7 +27,18 @@ public class InputManager : MonoBehaviour
     /// </summary>
     public void TextChange()
     {
-        m_text.text = "あなたの名前：" + inputField.text;
+        if (inputField.contentType == InputField.ContentType.IntegerNumber)
+        {
+            lineRenderer.positionCount = int.Parse(inputField.text);
+            for (int i = 0; i < lineRenderer.positionCount; i++)
+            {
+                lineRenderer.SetPosition(i,new Vector3(i , i * i / 4,0));
+            }
+        }
+        else if (inputField.contentType == InputField.ContentType.Standard)
+        {
+            m_text.text = "あなたの名前：" + inputField.text;
+        }
     }
 
     /// <summary>
